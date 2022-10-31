@@ -1,6 +1,20 @@
 import * as THREE from './three';
 import { OrbitControls, orbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
+import starsTexture from '../img/stars.jpg';
+import sunTexture from '../img/sun.jpg';
+import mercury from '../img/mercury.jpg';
+import venus from '../img/venus.jpg';
+import earth from '../img/earth.jpg';
+import mars from '../img/mars.jpg';
+import jupiterTexture from '../img/jupiter.jpg';
+import saturn from '../img/saturn.jpg';
+import saturnRingTexture from '../img/saturn-ring.jpg';
+import uranus from '../img/uranus.jpg';
+import uranusRingTexture from '../img/uranus-ring.jpg';
+import neptune from '../img/neptune.jpg';
+import pluto from '../img/pluto.jpg';
+
 const renderer = new THREE.WebGLRenderer();
 
 renderer.shadowMap.enabled = true;
@@ -20,3 +34,6 @@ scene.add(axesHelper);
 
 camera.position.set(-90, 140, 140);
 orbit.update();
+
+const ambientLight = new THREE.AmbientLight(0x333333);
+scene.add(ambientLight);

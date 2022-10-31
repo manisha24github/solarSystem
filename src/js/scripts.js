@@ -46,6 +46,7 @@ scene.background = cubeTextureLoader.load([
 ]);
 
 const textureLoader = new THREE.TextureLoader();
+const sunGeo = new THREE.SphereGeometry(i6, 30, 30);
 
 function animate() {
   renderer.render(scene, camera);

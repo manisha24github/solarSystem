@@ -49,5 +49,12 @@ const textureLoader = new THREE.TextureLoader();
 
 function animate() {
   renderer.render(scene, camera);
-  renderer.setAnimationLoop(animate);
 }
+
+renderer.setAnimationLoop(animate);
+
+window.addEventListener('resize', function () {
+  camera.aspect = this.window.innerWidth / this.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});

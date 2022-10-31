@@ -29,11 +29,18 @@ const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerH
 
 const orbit = new OrbitControls(camera, renderer.domElement);
 
-const axesHelper = new THREE.AxesHelper(3);
-scene.add(axesHelper);
-
 camera.position.set(-90, 140, 140);
 orbit.update();
 
 const ambientLight = new THREE.AmbientLight(0x333333);
 scene.add(ambientLight);
+
+const cubeTextureLoader = new THREE.CubeTextureLoader();
+scene.background = cubeTextureLoader.load([
+  starsTexture,
+  starsTexture,
+  starsTexture,
+  starsTexture,
+  starsTexture,
+  starsTexture,
+]);

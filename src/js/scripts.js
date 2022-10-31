@@ -1,4 +1,5 @@
 import * as THREE from './three';
+import { OrbitControls, orbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 const renderer = new THREE.WebGLRenderer();
 

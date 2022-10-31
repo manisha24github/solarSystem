@@ -44,3 +44,11 @@ scene.background = cubeTextureLoader.load([
   starsTexture,
   starsTexture,
 ]);
+
+const textureLoader = new THREE.TextureLoader();
+
+function animate() {
+  renderer.render(scene, camera);
+
+  renderer.setAnimationLoop(animate);
+}

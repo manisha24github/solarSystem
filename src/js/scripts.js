@@ -49,6 +49,5 @@ const textureLoader = new THREE.TextureLoader();
 
 function animate() {
   renderer.render(scene, camera);
-
   renderer.setAnimationLoop(animate);
 }

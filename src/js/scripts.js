@@ -53,6 +53,7 @@ const sun = new THREE.Mesh(sunGeo, sunMat);
 scene.add(sun);
 
 function animate() {
+  sun.rotateY(0.004);
   renderer.render(scene, camera);
 }
 

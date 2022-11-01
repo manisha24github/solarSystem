@@ -60,7 +60,9 @@ const mercuryMat = new THREE.MeshStandardMaterial({
 
 const mercury = new THREE.Mesh(mercuryGeo, mercuryMat);
 //scene.add(sun);
-sun.add(mercury);
+const mercuryObj = new THREE.Object3D();
+mercuryObj.add(mercury);
+scene.add(mercuryObj);
 mercury.position.x = 28;
 
 const pointLight = new THREE.PointLight(0xffffff, 2, 3000);
@@ -69,6 +71,7 @@ scene.add(pointLight);
 function animate() {
   sun.rotateY(0.004);
   mercury.rotateY(0.004);
+  mercuryObj.rotateY(0.04);
   renderer.render(scene, camera);
 }
 

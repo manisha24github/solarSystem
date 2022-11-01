@@ -63,6 +63,9 @@ const mercury = new THREE.Mesh(mercuryGeo, mercuryMat);
 sun.add(mercury);
 mercury.position.x = 28;
 
+const pointLight = new THREE.PointLight(0xffffff, 2, 3000);
+scene.add(pointLight);
+
 function animate() {
   sun.rotateY(0.004);
   mercury.rotateY(0.004);
